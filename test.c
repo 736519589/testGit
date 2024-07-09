@@ -21,6 +21,9 @@ int func1(){
 
 int func2(){
 	int a  = targetfunc();
+	if (a){
+		LOGE("This is wrong");
+	}
 	a = a + 1;
 	return a;
 }
@@ -51,7 +54,8 @@ int main(int arginfo){
 		func1();
 	}
 	else if (arginfo == 2){
-		func2();
+		if(func2())
+			LOGE("func2 error");
 	}
 	else{
 		buggy();
