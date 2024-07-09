@@ -51,7 +51,8 @@ int buggy(){
 
 int main(int arginfo){
 	if (arginfo == 1){
-		func1();
+		if(func1())
+			LOGE("func1 error");
 	}
 	else if (arginfo == 2){
 		if(func2())
