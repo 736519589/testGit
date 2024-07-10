@@ -21,6 +21,10 @@ int func1(){
 
 int func2_buggy(){
 	int er = targetfunc();
+	if(er){
+		LOGE("func2_buggy is wrong");
+		return F2Err;
+	}
 	er += 1;
 	return er;
 }
