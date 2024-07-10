@@ -23,6 +23,7 @@ int func2(){
 	int a  = targetfunc();
 	if (a){
 		LOGE("This is wrong");
+		return 1;
 	}
 	a = a + 1;
 	return a;
