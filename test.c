@@ -19,6 +19,12 @@ int func1(){
 	return 0;
 }
 
+int func2_buggy(){
+	int er = targetfunc();
+	er += 1;
+	return er;
+}
+
 int func2(){
 	int a  = targetfunc();
 	if (a){
